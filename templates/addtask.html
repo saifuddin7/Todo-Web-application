@@ -1,0 +1,66 @@
+<!-- Bootstrap core CSS -->
+<link href="static/css/bmin.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="static/css/myapp.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<style>
+    body{
+        padding-top: 0px;
+    }
+    nav{
+        margin: 0px 0px 30px 0px;
+    }
+    .txt{
+        text-align: center;
+        margin: 12px 40% 10px 10px;
+        font-size: 50px;
+        font-weight: 700;
+        color: #862421;
+    }
+</style>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                    <img src="static/images/todo.jpg" alt="" width="70" height="80" class="d-inline-block align-text-top">
+                  </a>
+                  <span class="txt">Todo Web</span>
+                </div>
+              </nav>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Add Tasks Todo</h2>
+            <form action="" method="POST">
+                <table class="table table-hover table-striped">
+                    <tr>
+                        <td>Task Title</td>
+                        <td><input type="text" class="form-control" name="title"></td>
+                    </tr>
+                    <tr>
+                        <td>Task Title</td>
+                        <td><textarea type="text" class="form-control" name="description"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>DOC</td>
+                        <td><input type="date" class="form-control" name="doc"></td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit" class="btn btn-primary">Submit</button>
+                        <a href="pending" class="btn btn-primary">Pending List</a></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script src="static/js/jq.js"></script>
+<script src="static/js/bmin.js"></script>

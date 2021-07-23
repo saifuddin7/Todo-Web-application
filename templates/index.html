@@ -1,0 +1,84 @@
+<!-- Bootstrap core CSS -->
+<link href="static/css/bmin.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="static/css/myapp.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+<style>
+    body{
+        padding-top: 0px;
+    }
+    nav{
+        margin: 0px 0px 30px 0px;
+    }
+    .txt{
+        text-align: center;
+        margin: 12px 40% 10px 10px;
+        font-size: 50px;
+        font-weight: 700;
+        color: #862421;
+    }
+</style>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                    <img src="static/images/todo.jpg" alt="" width="70" height="80" class="d-inline-block align-text-top">
+                  </a>
+                  <span class="txt">Todo Web</span>
+                </div>
+              </nav>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            
+            <h3><a href="pending" class="btn btn-warning position-relative">Pending Tasks <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{pcnt}}</span></a></h3>
+            <h3><a href="submitted" class="btn btn-warning position-relative">Completed Tasks <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{scnt}}</span></a></h3>
+            <h3><a href=""></a></h3>
+        </div>
+        <div class="col-lg-9">
+            
+            <table class="table table-striped table-hover">
+                <tr>
+                    <td>ID</td>
+                    <td>Task Title</td>
+                    <td>Task Description</td>
+                    <td>Date</td>
+                    <td colspan="2">Action</td>
+                </tr>
+                <h1 style="color: #673D3C;">{{msg}}</h1>
+                {%for i in list%}
+                <tr>
+                    <td>{{i.0}}</td>
+                    <td>{{i.1}}</td>
+                    <td>{{i.2}}</td>
+                    <td>{{i.3}}</td>
+                    <td><a class="btn btn-success" href="completed?id={{i.0}}">Marked Completed</a>
+                    <a class="btn btn-danger" href="delete?id={{i.0}}">Delete</a></td>
+                </tr>
+                {%endfor%}
+                <h1 style="color: #673D3C;">{{smsg}}</h1>
+                {%for i in slist%}
+                <tr>
+                    <td>{{i.0}}</td>
+                    <td>{{i.1}}</td>
+                    <td>{{i.2}}</td>
+                    <td>{{i.3}}</td>
+                    <td><a class="btn btn-danger" href="deletetask?id={{i.0}}">Delete</a></td>
+                </tr>
+                {%endfor%}
+            </table>
+            <a class="btn btn-danger" href="addtask">Add Task</a>
+        </div>
+    </div>
+</div>
+
+
+<script src="static/js/jq.js"></script>
+<script src="static/js/bmin.js"></script>
